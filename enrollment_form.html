@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <h1>Student Enrollment Form</h1>
+
+        <!-- Instructions -->
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Fill in the form fields.</li>
+            <li>Check your interests.</li>
+            <li>Click "Enroll Now" to submit.</li>
+        </ol>
+
+        <!-- Enrollment Form -->
+        <form action="/submit" method="POST">
+            <!-- Full Name -->
+            <label for="fullName"id='form-text'>Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+
+            <!-- Email -->
+            <label for="email" id="form-text">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Age -->
+            <label for="age" id="form-text">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <!-- Sex -->
+            <label id="form-text">Sex:</label>
+
+            <label for="male" id="male">Male</label>
+            <input type="radio" id="male" name="sex" value="Male" required>
+
+            <label for="female" id="Female">Female</label>
+            <input type="radio" id="female" name="sex" value="Female" required>
+
+            <!-- Course Options -->
+            <label for="course" id="form-text">Course Options:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="BSIT">BSIT</option>
+                <option value="BSSW">BSE</option>
+                <option value="BSPA">BSA</option>
+                <option value="DHRA">BSSW</option>
+                <option value="BSAIS">BSAIS</option>
+            </select>
+
+            <!-- Interests -->
+            <label id="form-text">Interests:</label>
+            <div id="interest">
+                <input type="checkbox" id="webDev" name="interests" value="Web Development">
+                <label for="webDev" id="webDev">Web Development</label>
+                <br>
+                <input type="checkbox" id="dataScience" name="interests" value="Data Science">
+                <label for="dataScience" id="dataScience">Data Science</label>
+                <br>
+                <input type="checkbox" id="networking" name="interests" value="Networking">
+                <label for="networking" id="networking">Networking</label>
+                <br>
+                <input type="checkbox" id="graphicDesign" name="interests" value="Graphic Design">
+                <label for="graphicDesign" id="graphicDesign">Graphic Design</label>
+            </div>
+
+
+            <!-- Submit Button -->
+            <button type="submit" id="enro">Enroll Now</button>
+        </form>
+
+        <!-- Student Data Table -->
+        <h3>Student Data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Course</th>
+                    <th>Interests</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dummy data rows -->
+                <tr>
+                    <td>1</td>
+                    <td>Justine Deso</td>
+                    <td>justinepogilng@gmail.com</td>
+                    <td>21</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Renato Cruz</td>
+                    <td>cruzretrigodzz@example.com</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Data Science,ML scholar</td>
+                </tr>
+                    <td>3</td>
+                    <td>Mark Angelo Salazar</td>
+                    <td>markcrossoverman@example.com</td>
+                    <td>22</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Data Algorithm,All Star</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>JC Rodriguez</td>
+                    <td>jcdunkdunkman@example.com</td>
+                    <td>21</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Master Coder</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
